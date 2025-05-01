@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import io.github.yurilopess.paymentMicroservices.model.Status;
+
 
 import java.util.UUID;
 
@@ -43,5 +45,13 @@ public class PaymentService {
 
     public void deletePayment(UUID id) {
         repository.deleteById(id);
+    }
+
+    public PaymentDto postPayment(PaymentDto dto) {
+        Payment payment = modelMapper.map(dto, Payment.class);
+        payment.setStatus(Status.CREATED);
+        repository.save(payment);
+
+        return modelMapper.map(payment, PaymentDto.class);
     }
 }

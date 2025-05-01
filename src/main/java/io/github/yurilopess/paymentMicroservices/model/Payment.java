@@ -47,7 +47,7 @@ public class Payment {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private String status;
+    private Status status;
 
     @NotNull
     private String orderId;

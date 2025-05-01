@@ -1,5 +1,6 @@
 package io.github.yurilopess.paymentMicroservices.dto;
 
+import io.github.yurilopess.paymentMicroservices.model.Status;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
@@ -18,7 +19,7 @@ public class PaymentDto {
     private String number;
     private String expiration;
     private String code;
-    private String status;
+    private Status status;
     private String orderId;
     private String paymentTypeId;
 }
