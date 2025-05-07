@@ -15,10 +15,6 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "payment", schema = "public")
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Payment {
 
     @Id
@@ -54,4 +50,88 @@ public class Payment {
 
     @NotNull
     private String paymentTypeId;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(String expiration) {
+        this.expiration = expiration;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getPaymentTypeId() {
+        return paymentTypeId;
+    }
+
+    public void setPaymentTypeId(String paymentTypeId) {
+        this.paymentTypeId = paymentTypeId;
+    }
+
+    public Payment(UUID id, BigDecimal value, String number, String name, String expiration, String code, Status status, String orderId, String paymentTypeId) {
+        this.id = id;
+        this.value = value;
+        this.number = number;
+        this.name = name;
+        this.expiration = expiration;
+        this.code = code;
+        this.status = status;
+        this.orderId = orderId;
+        this.paymentTypeId = paymentTypeId;
+    }
 }
