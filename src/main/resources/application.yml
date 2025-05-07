@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Payment Microservices
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:5433/main_database
+    username: postgres
+    password: root
