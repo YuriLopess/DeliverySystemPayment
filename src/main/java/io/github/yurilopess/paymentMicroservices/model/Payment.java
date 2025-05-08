@@ -19,36 +19,45 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
     @NotNull
     @Positive
+    @Column(name = "value")
     private BigDecimal value;
 
     @NotBlank
     @Size(max = 100)
+    @Column(name = "name")
     private String name;
 
     @NotBlank
     @Size(max = 19 )
+    @Column(name = "number")
     private String number;
 
     @NotBlank
     @Size(max = 7)
+    @Column(name = "expiration")
     private String expiration;
 
     @NotBlank
     @Size(min = 3, max = 3)
+    @Column(name = "code")
     private String code;
 
     @NotNull
     @Enumerated(EnumType.STRING)
+    @Column(name = "status")
     private Status status;
 
     @NotNull
+    @Column(name = "orderId")
     private String orderId;
 
     @NotNull
+    @Column(name = "paymentTypeId")
     private String paymentTypeId;
 
     public UUID getId() {
