@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.github.yurilopess</groupId>
-	<artifactId>paymentMicroservices</artifactId>
+	<artifactId>DeliverySystemPayments</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Payment Microservices</name>
 	<description>A project to work on the concepts of microservices.</description>
