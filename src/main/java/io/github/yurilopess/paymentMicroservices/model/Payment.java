@@ -143,4 +143,7 @@ public class Payment {
         this.orderId = orderId;
         this.paymentTypeId = paymentTypeId;
     }
+
+    public Payment() {
+    }
 }

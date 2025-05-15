@@ -100,4 +100,7 @@ public class PaymentDto {
         this.orderId = orderId;
         this.paymentTypeId = paymentTypeId;
     }
+
+    public PaymentDto() {
+    }
 }
